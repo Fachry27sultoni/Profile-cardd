@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(0, 27, 161, 0.18),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(29, 53, 87, 0.15),
+            transparent 27%
+        ),
+        #002a5e;
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Card */
+
+.card {
+    width: 390px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(31, 48, 66, 0.14);
+
+    border: 1px solid rgba(29, 53, 87, 0.06);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(31, 48, 66, 0.18);
+}
+
+
+/* Header */
+
+.header {
+    height: 145px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #193b5d 0%,
+            #245783 55%,
+            #316f9e 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    position: relative;
+}
+
+
+/* Pola kecil pada header */
+
+.header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 35px solid rgba(255, 255, 255, 0.05);
+
+    top: -110px;
+    right: -70px;
+}
+
+.header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    bottom: -40px;
+    left: -30px;
+}
+
+
+/* Foto */
+
+.profile-photo {
+    width: 125px;
+    height: 125px;
+
+    padding: 5px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transform: translateY(62px);
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/* Content */
+
+.content {
+    padding: 78px 30px 28px;
+
+    text-align: center;
+}
+
+
+/* Nama */
+
+.content h1 {
+    color: #1d2a38;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    margin-bottom: 6px;
+}
+
+
+/* Role */
+
+.role {
+    color: #2c6595;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 17px;
+}
+
+
+/* Deskripsi */
+
+.description {
+    max-width: 310px;
+
+    margin: 0 auto 24px;
+
+    color: #697586;
+
+    font-size: 13.5px;
+
+    line-height: 1.7;
+}
+
+
+/* Informasi */
+
+.information {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+}
+
+.info-box {
+    flex: 1;
+
+    background: #f5f8fb;
+
+    border: 1px solid #e5ebf1;
+
+    border-radius: 9px;
+
+    padding: 13px 5px;
+
+    transition: 0.25s;
+}
+
+.info-box:hover {
+    background: #edf4fa;
+
+    border-color: #cbdceb;
+}
+
+.info-box h3 {
+    color: #27384a;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #708090;
+
+    font-size: 11px;
+}
+
+
+/* Section */
+
+.section {
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    color: #293847;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    padding-left: 11px;
+}
+
+.section h2::before {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 17px;
+
+    background: #2d6a9f;
+
+    border-radius: 3px;
+
+    left: 0;
+    top: 0;
+}
+
+.section > p {
+    color: #6d7885;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Skill */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.skills span {
+    background: #eef5fb;
+
+    color: #2a608f;
+
+    border: 1px solid #dce9f3;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 11.5px;
+
+    transition: 0.2s;
+}
+
+.skills span:hover {
+    background: #2d6a9f;
+
+    color: white;
+
+    border-color: #2d6a9f;
+}
+
+
+/* Social Media */
+
+.social {
+    display: flex;
+
+    gap: 8px;
+}
+
+.social a {
+    flex: 1;
+
+    padding: 9px 4px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #35688f;
+
+    background: #ffffff;
+
+    border: 1px solid #d5e0e9;
+
+    border-radius: 6px;
+
+    font-size: 11.5px;
+
+    transition: 0.25s;
+}
+
+.social a:hover {
+    background: #1d3557;
+
+    color: white;
+
+    border-color: #1d3557;
+
+    transform: translateY(-2px);
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #1d3557;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #285276;
+
+    box-shadow:
+        0 5px 12px rgba(29, 53, 87, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* Pesan */
+
+#message {
+    min-height: 18px;
+
+    margin-top: 11px;
+
+    color: #2d6a9f;
+
+    font-size: 12px;
+}
+
+
+/* Footer */
+
+.footer {
+    background: #f7f9fb;
+
+    border-top: 1px solid #edf0f3;
+
+    padding: 14px;
+
+    text-align: center;
+}
+
+.footer p {
+    color: #8a949e;
+
+    font-size: 10.5px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 450px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+
+        border-radius: 15px;
+    }
+
+    .header {
+        height: 135px;
+    }
+
+    .profile-photo {
+        width: 115px;
+        height: 115px;
+
+        transform: translateY(57px);
+    }
+
+    .content {
+        padding: 70px 22px 25px;
+    }
+
+    .content h1 {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .information {
+        gap: 7px;
+    }
+
+    .info-box {
+        padding: 11px 3px;
+    }
+
+    .social a {
+        font-size: 10.5px;
+    }
+}
